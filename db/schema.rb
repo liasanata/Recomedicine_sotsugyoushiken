@@ -10,44 +10,5 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_06_03_011703) do
-  create_table "ingredients", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", limit: 50, null: false
-    t.string "body", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "symptom_ingredients", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "ingredient_id", null: false
-    t.bigint "symptom_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ingredient_id", "symptom_id"], name: "index_symptom_ingredients_on_ingredient_id_and_symptom_id", unique: true
-    t.index ["ingredient_id"], name: "index_symptom_ingredients_on_ingredient_id"
-    t.index ["symptom_id"], name: "index_symptom_ingredients_on_symptom_id"
-  end
-
-  create_table "symptoms", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", limit: 50, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_symptoms_on_name", unique: true
-  end
-
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", limit: 30, null: false
-    t.string "email", null: false
-    t.string "crypted_password", null: false
-    t.string "reset_password_token"
-    t.string "string"
-    t.string "salt"
-    t.integer "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-  end
-
-  add_foreign_key "symptom_ingredients", "ingredients"
-  add_foreign_key "symptom_ingredients", "symptoms"
+ActiveRecord::Schema[7.2].define(version: 0) do
 end
