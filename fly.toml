@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for recomedicine-sotsugyoushiken on 2025-06-03T09:17:12Z
+# fly.toml app configuration file generated for recomedicine-sotsugyoushiken-9oscoq on 2025-06-03T11:00:41Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'recomedicine-sotsugyoushiken'
+app = 'recomedicine-sotsugyoushiken-9oscoq'
 primary_region = 'nrt'
 console_command = '/rails/bin/rails console'
 
