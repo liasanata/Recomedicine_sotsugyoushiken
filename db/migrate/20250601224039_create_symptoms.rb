@@ -1,6 +1,6 @@
 class CreateSymptoms < ActiveRecord::Migration[7.2]
   def change
-    create_table :symptoms do |t|
+        create_table :symptoms do |t|
       t.string :name, :limit => 50, null: false
 
       t.timestamps

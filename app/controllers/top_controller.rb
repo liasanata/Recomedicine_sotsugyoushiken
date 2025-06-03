@@ -10,7 +10,7 @@ class TopController < ApplicationController
       end
     end
     # どちらの条件にも当てはまらなければ、症状入力画面を表示する
-    render :index
+    redirect_to controller: 'symptoms', action: 'index'
   end
 
 end
